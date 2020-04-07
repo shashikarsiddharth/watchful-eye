@@ -1,9 +1,9 @@
 import packages
 
-class plot_data:
+class plotData:
     def __init__(self, ticker_name):
         ''' Function for initializing class variables. '''
-        self.df   = 0
+        self.df = 0
         self.tick = ticker_name + '.csv'
         
     def read_csv(self):
@@ -23,6 +23,6 @@ class plot_data:
         
 if __name__ == "__main__":
     ticker_name = input("Enter the ticker name for plotting.\n")
-    feature     = input("Enter the feature name for plotting.\n")
-    org         = plot_data(ticker_name)
+    feature = input("Enter the feature name for plotting.\n")
+    org = plotData(ticker_name)
     org.plot_one(feature)

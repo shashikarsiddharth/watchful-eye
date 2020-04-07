@@ -1,28 +1,28 @@
 import packages
 
-class fetch_data:
+class fetchData:
     def __init__(self, ticker_name):
         ''' Function for initializing class variables. '''
-        self.st_year       = 0
-        self.end_year      = 0
-        self.st_month      = 0
-        self.st_date       = 0
-        self.end_month     = 0
-        self.end_date      = 0
-        self.tick          = ticker_name
+        self.st_year = 0
+        self.end_year = 0
+        self.st_month = 0
+        self.st_date = 0
+        self.end_month = 0
+        self.end_date = 0
+        self.tick = ticker_name
         self.search_engine = 'yahoo'
 
     def set_start_date(self):
         ''' Function for setting start date. ''' 
-        self.st_date  = int(input("Enter start date: "))        
+        self.st_date = int(input("Enter start date: "))        
         self.st_month = int(input("Enter start month: "))
-        self.st_year  = int(input("Enter start year: "))
+        self.st_year = int(input("Enter start year: "))
         
     def set_end_date(self):
         ''' Function for setting end date. '''
-        self.end_date  = int(input("Enter end date: "))
+        self.end_date = int(input("Enter end date: "))
         self.end_month = int(input("Enter end month: "))
-        self.end_year  = int(input("Enter end year: "))
+        self.end_year = int(input("Enter end year: "))
         
     def return_df(self):
         ''' Function for returns dataframes loaded with data. '''
@@ -43,7 +43,7 @@ class fetch_data:
 
 if __name__ == "__main__":        
     ticker_name = input("Enter company's ticker name for gathering data.\n")
-    org         = fetch_data(ticker_name)
+    org = fetchData(ticker_name)
     org.set_start_date()
     org.set_end_date()
     org.save_csv()
